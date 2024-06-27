@@ -1,1 +1,3 @@
-
+#ifndef NN_UI2D_TEXTBOX_HXX
+#define NN_UI2D_TEXTBOX_HXX
+#endif
