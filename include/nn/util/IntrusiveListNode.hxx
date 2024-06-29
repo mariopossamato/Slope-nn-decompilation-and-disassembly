@@ -3,6 +3,9 @@
 
 namespace nn::util {
 class IntrusiveListNode {
+private:
+  IntrusiveListNode *m_Prev;
+  IntrusiveListNode *m_Next;
 };
 } // end namespace nn::util
 
