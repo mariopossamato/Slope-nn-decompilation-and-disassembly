@@ -3,6 +3,10 @@
 
 namespace nn::util {
 class IntrusiveListNode {
+public:
+  IntrusiveListNode();
+  IntrusiveListNode(IntrusiveListNode const&) = delete;
+  IntrusiveListNode& operator=(IntrusiveListNode const&) = delete;
 private:
   IntrusiveListNode *m_Prev;
   IntrusiveListNode *m_Next;
