@@ -8,8 +8,8 @@ public:
   IntrusiveListNode(IntrusiveListNode const&) = delete;
   IntrusiveListNode& operator=(IntrusiveListNode const&) = delete;
 private:
-  IntrusiveListNode *m_Prev;
-  IntrusiveListNode *m_Next;
+  IntrusiveListNode* m_Prev;
+  IntrusiveListNode* m_Next;
 };
 } // end namespace nn::util
 
