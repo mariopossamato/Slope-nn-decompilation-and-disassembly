@@ -22,6 +22,6 @@ private:
   IntrusiveListNode* m_pPrev;
   IntrusiveListNode* m_pNext;
 };
-} // end namespace nn::util
+} // namespace nn::util
 
 #endif
