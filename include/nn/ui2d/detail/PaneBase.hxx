@@ -5,10 +5,10 @@
 
 namespace nn::ui2d::detail {
 struct PaneBase {
-  PaneBase();
+  PaneBase() = default;
   PaneBase(PaneBase const&) = delete;
   PaneBase& operator=(PaneBase const&) = delete;
-  virtual ~PaneBase();
+  virtual ~PaneBase() = default;
   nn::util::IntrusiveListNode m_Link;
 };
 } // namespace nn::ui2d::detail
