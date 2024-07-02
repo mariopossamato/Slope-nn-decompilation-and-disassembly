@@ -11,6 +11,6 @@ struct PaneBase {
   virtual ~PaneBase();
   nn::util::IntrusiveListNode m_Link;
 };
-} // end namespace nn::ui2d::detail
+} // namespace nn::ui2d::detail
 
 #endif
