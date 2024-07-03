@@ -1,6 +1,8 @@
 #include "nn/util/IntrusiveListNode.hxx"
 
 nn::util::IntrusiveListNode::IntrusiveListNode() {
+  this->m_pPrev = this;
+  this->m_pNext = this;
 }
 
 bool nn::util::IntrusiveListNode::IsLinked() const {
