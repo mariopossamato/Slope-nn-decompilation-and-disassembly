@@ -18,9 +18,11 @@ const nn::util::IntrusiveListNode* nn::util::IntrusiveListNode::GetPrev() const 
 }
 
 nn::util::IntrusiveListNode* nn::util::IntrusiveListNode::GetNext() {
+  return this->m_pNext;
 }
 
 const nn::util::IntrusiveListNode* nn::util::IntrusiveListNode::GetNext() const {
+  return this->m_pNext;
 }
 
 void nn::util::IntrusiveListNode::LinkPrev(nn::util::IntrusiveListNode* pNode) {
