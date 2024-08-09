@@ -6,6 +6,7 @@ nn::util::IntrusiveListNode::IntrusiveListNode() {
 }
 
 bool nn::util::IntrusiveListNode::IsLinked() const {
+  return this->m_pNext != this;
 }
 
 nn::util::IntrusiveListNode* nn::util::IntrusiveListNode::GetPrev() {
