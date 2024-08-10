@@ -26,9 +26,15 @@ const nn::util::IntrusiveListNode* nn::util::IntrusiveListNode::GetNext() const 
 }
 
 void nn::util::IntrusiveListNode::LinkPrev(nn::util::IntrusiveListNode* pNode) {
+  LinkPrev(pNode, pNode);
 }
 
 void nn::util::IntrusiveListNode::LinkPrev(nn::util::IntrusiveListNode* pFirst, nn::util::IntrusiveListNode* pLast) {
+  IntrusiveListNode* pNode = pLast->m_pPrev;
+  pFirst->m_pPrev = this->m_pPrev;
+  pNode->m_pNext = this;
+  this->m_pPrev->m_pNext = pFirst;
+  this->m_pPrev = pNode;
 }
 
 void nn::util::IntrusiveListNode::LinkNext(nn::util::IntrusiveListNode* pNode) {
