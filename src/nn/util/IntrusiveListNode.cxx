@@ -50,7 +50,13 @@ void nn::util::IntrusiveListNode::LinkNext(nn::util::IntrusiveListNode* pFirst, 
 }
 
 void nn::util::IntrusiveListNode::Unlink() {
+  Unlink(this->m_pNext);
 }
 
 void nn::util::IntrusiveListNode::Unlink(nn::util::IntrusiveListNode* pLast) {
+  IntrusiveListNode* pNode = pLast->m_pPrev;
+  this->m_pPrev->m_pNext = pLast;
+  pLast->m_pPrev = this->m_pPrev;
+  pNode->m_pNext = this;
+  this->m_pPrev = pNode;
 }
