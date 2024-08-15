@@ -5,6 +5,8 @@
 
 namespace nn::ui2d {
 class Pane : public nn::ui2d::detail::PaneBase {
+private:
+  Pane* m_pParent;
 };
 } // namespace nn::ui2d
 
