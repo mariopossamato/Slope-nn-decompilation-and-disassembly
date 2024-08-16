@@ -1,9 +1,14 @@
 #ifndef NN_UTIL_INTRUSIVELISTNODE_HXX
 #define NN_UTIL_INTRUSIVELISTNODE_HXX
 
+namespace nn::util::detail {
+class IntrusiveListImplementation;
+} // namespace nn::util::detail
+
 namespace nn::util {
 class IntrusiveListNode {
 public:
+  friend nn::util::detail::IntrusiveListImplementation;
   IntrusiveListNode();
   IntrusiveListNode(IntrusiveListNode const&) = delete;
   IntrusiveListNode& operator=(IntrusiveListNode const&) = delete;
